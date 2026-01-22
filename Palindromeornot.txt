@@ -1,0 +1,37 @@
+using System;
+class program
+
+{
+    
+    static void Main()
+    {
+      
+        
+        string input = "madam";
+        Console.WriteLine(input);
+      
+        int left = 0;
+        
+        int right = input.Length -1 ;
+        bool palindrome = true;
+        
+        while(left<right)
+        {
+            if(input[left] != input[right])
+            
+            {
+                palindrome = false;
+                break;
+                
+            }
+            left ++;
+            right --;
+        }
+        
+        
+      Console.WriteLine(palindrome);
+        
+        
+        
+    }
+}

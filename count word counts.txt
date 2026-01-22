@@ -1,0 +1,27 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string sentence = "  Hello world   from C sharp  ";
+
+        int wordCount = 0;
+        bool inWord = false;
+
+        for (int i = 0; i < sentence.Length; i++)
+        {
+            if (sentence[i] != ' ' && !inWord)
+            {
+                wordCount++;
+                inWord = true;
+            }
+            else if (sentence[i] == ' ')
+            {
+                inWord = false;
+            }
+        }
+
+        Console.WriteLine("Word Count: " + wordCount);
+    }
+}

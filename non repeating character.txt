@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        string input = "swiss";
+
+        Dictionary<char, int> freq = new Dictionary<char, int>();
+
+        // Step 1: Count frequency of each character
+        for (int i = 0; i < input.Length; i++)
+        {
+            char ch = input[i];
+
+            if (freq.ContainsKey(ch))
+                freq[ch]++;
+            else
+                freq[ch] = 1;
+        }
+
+        // Step 2: Find first character with frequency 1
+        for (int i = 0; i < input.Length; i++)
+        {
+            if (freq[input[i]] == 1)
+            {
+                Console.WriteLine("First non-repeating character: " + input[i]);
+                return;
+            }
+        }
+
+        Console.WriteLine("No non-repeating character found");
+    }
+}
