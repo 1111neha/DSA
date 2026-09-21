@@ -1,0 +1,6 @@
+class Solution {
+    public long[] resultArray(int[] nums, int k) {
+        int n = nums.length;
+
+        long[] result = new long[k];
+        long[] prevCount = new long[k];
